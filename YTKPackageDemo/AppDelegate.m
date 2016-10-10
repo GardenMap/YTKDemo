@@ -7,12 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "YTKNetworkConfig.h"
+
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
+- (void)setRequestFilters{
+    NSString *appVersion = @"V1.0";
+    YTKNetworkConfig *config = [YTKNetworkConfig sharedInstance];
+    config.baseUrl = @"https://shimo.im/doc";//请求根域名
+    config.cdnUrl = @"";//静态CDN域名
+
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

@@ -14,6 +14,7 @@
 		D6B5FFD31DAB328A00613C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B5FFD11DAB328A00613C6A /* Main.storyboard */; };
 		D6B5FFD51DAB328A00613C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B5FFD41DAB328A00613C6A /* Assets.xcassets */; };
 		D6B5FFD81DAB328A00613C6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B5FFD61DAB328A00613C6A /* LaunchScreen.storyboard */; };
+		D6B5FFE21DAB3A2B00613C6A /* NewsHttpEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B5FFE11DAB3A2B00613C6A /* NewsHttpEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		D6B5FFD41DAB328A00613C6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6B5FFD71DAB328A00613C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6B5FFD91DAB328A00613C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6B5FFE01DAB3A1400613C6A /* NewsHttpEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewsHttpEngine.h; path = Network/NewsHttpEngine.h; sourceTree = SOURCE_ROOT; };
+		D6B5FFE11DAB3A2B00613C6A /* NewsHttpEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsHttpEngine.m; path = Network/NewsHttpEngine.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 		D6B5FFC71DAB328A00613C6A /* YTKPackageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D6B5FFDF1DAB364D00613C6A /* Network */,
 				D6B5FFCB1DAB328A00613C6A /* AppDelegate.h */,
 				D6B5FFCC1DAB328A00613C6A /* AppDelegate.m */,
 				D6B5FFCE1DAB328A00613C6A /* ViewController.h */,
@@ -101,6 +105,23 @@
 				D6B5FFC91DAB328A00613C6A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6B5FFDF1DAB364D00613C6A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D6B5FFE31DAB401F00613C6A /* Base */,
+				D6B5FFE01DAB3A1400613C6A /* NewsHttpEngine.h */,
+				D6B5FFE11DAB3A2B00613C6A /* NewsHttpEngine.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		D6B5FFE31DAB401F00613C6A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +249,7 @@
 			files = (
 				D6B5FFD01DAB328A00613C6A /* ViewController.m in Sources */,
 				D6B5FFCD1DAB328A00613C6A /* AppDelegate.m in Sources */,
+				D6B5FFE21DAB3A2B00613C6A /* NewsHttpEngine.m in Sources */,
 				D6B5FFCA1DAB328A00613C6A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HD29GU94HU;
 				INFOPLIST_FILE = YTKPackageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Personal.YTKPackageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -362,6 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HD29GU94HU;
 				INFOPLIST_FILE = YTKPackageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Personal.YTKPackageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

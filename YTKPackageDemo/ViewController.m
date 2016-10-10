@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "NewsHttpEngine.h"
 
-@interface ViewController ()
+@interface ViewController()<YTKRequestDelegate>
 
 @end
 
@@ -16,13 +17,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
+
+- (void)callNewsFeedDataWithBlock{
+    NSString *objectId = @"";
+    if (objectId.length > 0) {
+        NewsHttpEngine *newsEngine = [[NewsHttpEngine alloc] initWithUserObjectId:objectId];
+        [newsEngine startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+            NSLog(@"success");
+        } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+            NSLog(@"failed");
+        }];
+    }
+}
+
+- (void)callNewsFeedDataWithDelegate{
+    NSString *objectId = @"";
+    if (objectId.length > 0) {
+        NewsHttpEngine *engine = [[NewsHttpEngine alloc] initWithUserObjectId:objectId];
+        engine.delegate = self;
+        [engine start];
+    }
+}
+
+-(void)requestFinished:(YTKBaseRequest *)request{
+    NSLog(@"success");
+}
+
+-(void)requestFailed:(YTKBaseRequest *)request{
+    NSLog(@"failed");
+}
+
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
