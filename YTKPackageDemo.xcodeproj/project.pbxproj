@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20BE96978710A1917256C2C /* libPods-YTKPackageDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0FCCFC1D119EB2F1B5825 /* libPods-YTKPackageDemo.a */; };
 		D6B5FFCA1DAB328A00613C6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B5FFC91DAB328A00613C6A /* main.m */; };
 		D6B5FFCD1DAB328A00613C6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B5FFCC1DAB328A00613C6A /* AppDelegate.m */; };
 		D6B5FFD01DAB328A00613C6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B5FFCF1DAB328A00613C6A /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BF5C93FF5AB1432F33AB52E /* Pods-YTKPackageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTKPackageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YTKPackageDemo/Pods-YTKPackageDemo.release.xcconfig"; sourceTree = "<group>"; };
+		ADB0FCCFC1D119EB2F1B5825 /* libPods-YTKPackageDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YTKPackageDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC574C33C93D1EC2FE1C0D6E /* Pods-YTKPackageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTKPackageDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YTKPackageDemo/Pods-YTKPackageDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D6B5FFC51DAB328A00613C6A /* YTKPackageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTKPackageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B5FFC91DAB328A00613C6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6B5FFCB1DAB328A00613C6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20BE96978710A1917256C2C /* libPods-YTKPackageDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16304DE9910C3890B4D040F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC574C33C93D1EC2FE1C0D6E /* Pods-YTKPackageDemo.debug.xcconfig */,
+				5BF5C93FF5AB1432F33AB52E /* Pods-YTKPackageDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		65AAFF56C21CF176C6D3F33C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADB0FCCFC1D119EB2F1B5825 /* libPods-YTKPackageDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D6B5FFBC1DAB328900613C6A = {
 			isa = PBXGroup;
 			children = (
 				D6B5FFC71DAB328A00613C6A /* YTKPackageDemo */,
 				D6B5FFC61DAB328A00613C6A /* Products */,
+				16304DE9910C3890B4D040F1 /* Pods */,
+				65AAFF56C21CF176C6D3F33C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6B5FFDC1DAB328A00613C6A /* Build configuration list for PBXNativeTarget "YTKPackageDemo" */;
 			buildPhases = (
+				25FC231DF37EFADAD303EF05 /* [CP] Check Pods Manifest.lock */,
 				D6B5FFC11DAB328900613C6A /* Sources */,
 				D6B5FFC21DAB328900613C6A /* Frameworks */,
 				D6B5FFC31DAB328900613C6A /* Resources */,
+				7962526E04D5946328EA2BE8 /* [CP] Embed Pods Frameworks */,
+				067602031CC3CCFF698D8CA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		067602031CC3CCFF698D8CA7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YTKPackageDemo/Pods-YTKPackageDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25FC231DF37EFADAD303EF05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7962526E04D5946328EA2BE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YTKPackageDemo/Pods-YTKPackageDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D6B5FFC11DAB328900613C6A /* Sources */ = {
@@ -269,6 +344,7 @@
 		};
 		D6B5FFDD1DAB328A00613C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC574C33C93D1EC2FE1C0D6E /* Pods-YTKPackageDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HD29GU94HU;
@@ -281,6 +357,7 @@
 		};
 		D6B5FFDE1DAB328A00613C6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BF5C93FF5AB1432F33AB52E /* Pods-YTKPackageDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HD29GU94HU;
@@ -310,6 +387,7 @@
 				D6B5FFDE1DAB328A00613C6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
